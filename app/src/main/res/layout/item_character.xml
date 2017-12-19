@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <variable
-            name="itemCharacter"
+            name="viewModel"
             type="com.fstyle.androidtrainning.screen.main.ItemViewModel"/>
     </data>
     <LinearLayout
@@ -42,7 +42,7 @@
                     android:layout_toRightOf="@+id/character_image"
                     android:layout_toEndOf="@+id/character_image"
                     android:textSize="30sp"
-                    android:text=""/>
+                    android:text="@{viewModel.name}"/>
 
                 <TextView
                     android:id="@+id/character_description"
@@ -51,7 +51,7 @@
                     android:layout_below="@+id/character_name"
                     android:layout_toRightOf="@+id/character_image"
                     android:layout_toEndOf="@+id/character_image"
-                    android:text=""/>
+                    android:text="@{viewModel.description}"/>
             </RelativeLayout>
         </android.support.v7.widget.CardView>
     </LinearLayout>
