@@ -2,32 +2,26 @@ package com.fstyle.androidtrainning.screen.main;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import com.fstyle.androidtrainning.R;
-import com.fstyle.androidtrainning.data.model.CharacterItem;
 import com.fstyle.androidtrainning.databinding.CharacterMainBinding;
 import com.fstyle.androidtrainning.screen.BaseActivity;
-import com.fstyle.androidtrainning.utils.Constant;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends BaseActivity {
     private static final String TAG = MainActivity.class.getName();
-
     private MainCharacterViewModel mViewModel;
-    private List<CharacterItem> characters = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        characters = getIntent().getParcelableArrayListExtra(Constant.ARGUMENT_LIST_CHARACTER);
-        MainAdapter mainAdapter = new MainAdapter(this, (characters));
+        MainAdapter mainAdapter =  new MainAdapter(getApplicationContext());
         mViewModel = new MainCharacterViewModel(mainAdapter);
         CharacterMainBinding binding =
-                DataBindingUtil.setContentView(this, R.layout.character_main);
+                DataBindingUtil.setContentView(MainActivity.this, R.layout.character_main);
+        binding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
         binding.setViewModel(mViewModel);
     }
 
