@@ -21,17 +21,12 @@ import java.util.List;
 
 public class MainAdapter extends BaseRecyclerViewAdapter<MainAdapter.ItemViewHolder> {
 
-    private List<CharacterItem> mCharacters;
+    private List<CharacterItem> mCharacters = new ArrayList<>();
     private BaseRecyclerViewAdapter.OnRecyclerViewItemClickListener<CharacterItem>
             mItemClickListener;
 
-    protected MainAdapter(@NonNull Context context, List<CharacterItem> characters) {
+    protected MainAdapter(@NonNull Context context) {
         super(context);
-        mCharacters = new ArrayList<>();
-        if (characters == null) {
-            return;
-        }
-        mCharacters.addAll(characters);
     }
 
     @Override
@@ -55,6 +50,11 @@ public class MainAdapter extends BaseRecyclerViewAdapter<MainAdapter.ItemViewHol
     public void setItemClickListener(OnRecyclerViewItemClickListener<CharacterItem>
                                              itemClickListener) {
         mItemClickListener = itemClickListener;
+    }
+
+    public void updateData(List<CharacterItem> characterItems) {
+        mCharacters.addAll(characterItems);
+        notifyDataSetChanged();
     }
 
     /**

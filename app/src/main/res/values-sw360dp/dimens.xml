@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="dp_48">48dp</dimen>
+    <dimen name="dp_13">13dp</dimen>
+</resources>
