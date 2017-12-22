@@ -3,6 +3,7 @@ package com.fstyle.androidtrainning.screen;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 /**
  * Base Adapter.
@@ -27,6 +28,6 @@ public abstract class BaseRecyclerViewAdapter<V extends RecyclerView.ViewHolder>
      * OnRecyclerViewItemClickListener
      */
     public interface OnRecyclerViewItemClickListener<T> {
-        void onItemRecyclerViewClick(T item);
+        void onItemRecyclerViewClick(View view, T item);
     }
 }

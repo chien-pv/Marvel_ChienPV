@@ -20,6 +20,7 @@ public class ItemViewModel  extends BaseObservable {
     public String getName() {
         return mCharacter.getName();
     }
+
     public String getDescription() {
         return mCharacter.getDescription();
     }
@@ -32,7 +33,7 @@ public class ItemViewModel  extends BaseObservable {
         if (mItemClickListener == null) {
             return;
         }
-        mItemClickListener.onItemRecyclerViewClick(mCharacter);
+        mItemClickListener.onItemRecyclerViewClick(view, mCharacter);
     }
 
 }

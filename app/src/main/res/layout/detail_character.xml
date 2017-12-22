@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.fstyle.androidtrainning.screen.detail_character.DetailCharacterViewModel"/>
+    </data>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:id="@+id/character_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <ImageView
+                        android:id="@+id/character_image"
+                        android:layout_width="@dimen/db_450"
+                        android:layout_height="@dimen/db_300"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:contentDescription="@string/content_description_image"
+                        app:imageUrl="@{viewModel.imageUrl}" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_super_hero_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/db_16"
+                    android:layout_marginTop="@dimen/db_16"
+                    android:text="@{viewModel.name}"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textSize="@dimen/db_20" />
+
+                <TextView
+                    android:id="@+id/tv_super_hero_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/db_16"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/dp_16"
+                    android:text="@{viewModel.description}"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</layout>

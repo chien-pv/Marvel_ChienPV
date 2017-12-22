@@ -1,4 +1,10 @@
 <resources>
     <dimen name="dp_48">48dp</dimen>
     <dimen name="dp_13">13dp</dimen>
+    <dimen name="db_16">16dp</dimen>
+    <dimen name="db_450">400dp</dimen>
+    <dimen name="db_100">100dp</dimen>
+    <dimen name="db_300">300dp</dimen>
+    <dimen name="db_20">20dp</dimen>
+    <dimen name="dp_16">16dp</dimen>
 </resources>

@@ -22,7 +22,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:minHeight="0dp"
-                android:padding="16dp">
+                android:padding="16dp"
+                android:onClick="@{(v) -> viewModel.onItemClicked(v)}" >
 
                 <ImageView
                     android:id="@+id/character_image"

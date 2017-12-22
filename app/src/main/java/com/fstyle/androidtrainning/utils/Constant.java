@@ -9,6 +9,8 @@ public final class Constant {
 
     // For bundle
     public static final String ARGUMENT_LIST_CHARACTER = "ARGUMENT_LIST_CHARACTER";
+    public static final String ARGUMENT_CHARACTER = "ARGUMENT_CHARACTER";
+
 
     public static final String BREAK_LINE = "\n";
 }

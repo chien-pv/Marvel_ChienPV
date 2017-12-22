@@ -1,12 +1,13 @@
 package com.fstyle.androidtrainning.data.model;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by framgia on 15/12/2017.
  */
 
-public class CharacterItem{
+public class CharacterItem implements Serializable {
     /**
      * id : 1011334
      * name : 3-D Man
@@ -121,7 +122,7 @@ public class CharacterItem{
         this.urls = urls;
     }
 
-    public static class ThumbnailBean {
+    public static class ThumbnailBean implements Serializable {
         /**
          * path : http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784
          * extension : jpg
@@ -147,7 +148,7 @@ public class CharacterItem{
         }
     }
 
-    public static class ComicsBean {
+    public static class ComicsBean implements Serializable {
         /**
          * available : 12
          * collectionURI : http://gateway.marvel.com/v1/public/characters/1011334/comics
@@ -192,7 +193,7 @@ public class CharacterItem{
             this.items = items;
         }
 
-        public static class ItemsBean {
+        public static class ItemsBean implements Serializable {
             /**
              * resourceURI : http://gateway.marvel.com/v1/public/comics/21366
              * name : Avengers: The Initiative (2007) #14
@@ -219,7 +220,7 @@ public class CharacterItem{
         }
     }
 
-    public static class SeriesBean {
+    public static class SeriesBean implements Serializable {
         /**
          * available : 3
          * collectionURI : http://gateway.marvel.com/v1/public/characters/1011334/series
@@ -264,7 +265,7 @@ public class CharacterItem{
             this.items = items;
         }
 
-        public static class ItemsBeanX {
+        public static class ItemsBeanX implements Serializable {
             /**
              * resourceURI : http://gateway.marvel.com/v1/public/series/1945
              * name : Avengers: The Initiative (2007 - 2010)
@@ -291,7 +292,7 @@ public class CharacterItem{
         }
     }
 
-    public static class StoriesBean {
+    public static class StoriesBean implements Serializable {
         /**
          * available : 21
          * collectionURI : http://gateway.marvel.com/v1/public/characters/1011334/stories
@@ -336,7 +337,7 @@ public class CharacterItem{
             this.items = items;
         }
 
-        public static class ItemsBeanXX {
+        public static class ItemsBeanXX implements Serializable {
             /**
              * resourceURI : http://gateway.marvel.com/v1/public/stories/19947
              * name : Cover #19947
@@ -373,7 +374,7 @@ public class CharacterItem{
         }
     }
 
-    public static class EventsBean {
+    public static class EventsBean implements Serializable {
         /**
          * available : 1
          * collectionURI : http://gateway.marvel.com/v1/public/characters/1011334/events
@@ -418,7 +419,7 @@ public class CharacterItem{
             this.items = items;
         }
 
-        public static class ItemsBeanXXX {
+        public static class ItemsBeanXXX implements Serializable{
             /**
              * resourceURI : http://gateway.marvel.com/v1/public/events/269
              * name : Secret Invasion
@@ -445,7 +446,7 @@ public class CharacterItem{
         }
     }
 
-    public static class UrlsBean {
+    public static class UrlsBean implements Serializable {
         /**
          * type : detail
          * url : http://marvel.com/characters/74/3-d_man?utm_campaign=apiRef&utm_source=7a4ee917fb53941ccc691445dac51ef7
